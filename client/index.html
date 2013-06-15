@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- start: Meta -->
+  <meta charset="utf-8">
+  <title>Spartify : awesome parties with awesome playlists</title>
+  <meta name="description" content="spartify spotify party playlist shared">
+  <meta name="keyword" content="spotify, party, playlist, shared, spartify, awesome, fun">
+  <!-- end: Meta -->
+
+
+  <!-- start: CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link id="bootstrap-style" href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+  <link href="css/spartify.css" rel="stylesheet">
+</head>
+<body>
+
+  <script type="text/x-handlebars" data-template-name="index">
+  <div class="spartify-content">
+  {{view App.TextField valueBinding="query"}}
+  {{#collection Ember.ListView contentBinding="controller" height=500 rowHeight=50 width=500}}
+    <a {{bindAttr href="href"}} >{{name}} : {{album.name}}<br>
+    {{artists.name}}</a>
+  {{/collection}}
+  </div>
+  </script>
+
+
+  <!-- start: JavaScript-->
+  <script src="js/libs/jquery-1.9.1.js"></script>
+  <script src="js/libs/jquery-ui-1.8.21.custom.min.js"></script>
+  <script src="js/libs/modernizr.js"></script>
+  <script src="js/libs/bootstrap.js"></script>
+  <script src="js/libs/handlebars-1.0.0-rc.3.js"></script>
+  <script src="js/libs/ember.js"></script>
+  <script src="js/libs/ember-data.js"></script>
+  <script src="js/libs/ember-auth.js"></script>
+  <script src="js/libs/ember-list-view.js"></script>
+  <script src="js/libs/moment.min.js"></script>
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <script src="js/app.js"></script>
+  <!-- end: JavaScript-->
+
+  
+</body>
+</html>
